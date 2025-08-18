@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 const authKeys = require('./keys.js')
 
-app.get('/stationBoard/:stnCode', async (req, res) => {
+app.get('/getDepartures/:stnCode', async (req, res) => {
   res.send(await fetch(`https://api.rtt.io/api/v1/json/search/` +req.params.stnCode , {
     method: 'GET',
     headers: {
