@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './Components/Header.jsx'
 import ResultsBoard from './Components/ResultsBoard.jsx';
+import InfoModal from './Components/InfoModal.jsx';
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -8,6 +9,8 @@ function App() {
   const [stationCode, setStationCode] = useState('');
   const [results, setResults] = useState(null);
   const [error, setError] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [serviceUid, setServiceUid] = useState(null);
 
   function handleSubmit(){
     console.log(`localhost:3000/getDepartures/${stationCode}`)
@@ -22,8 +25,6 @@ function App() {
         setResults(response.data)
         
       }
-      {/*response.data.error !== undefined ?
-      setResults(null) : setResults(response.data) ; */}
     })
     .catch(error => {
       console.error('Error fetching data:', error);
@@ -41,9 +42,13 @@ function App() {
         <button type="submit">Get Times</button>
       </form>
       {results != null ? <div className="results">
-          <ResultsBoard data={results} />
-        </div>  : ""
+          <ResultsBoard data={results} setServiceUid={setServiceUid} setShowModal={setShowModal} />
+        </div>  : "" 
       }
+      {
+        showModal ? <InfoModal data={results} serviceUid={serviceUid}/> : ""
+      }
+      
     </>
   )
 }

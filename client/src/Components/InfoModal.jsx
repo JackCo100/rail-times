@@ -6,7 +6,7 @@ export default function InfoModal( {serviceUid}) {
     const [error, setError] = useState(false);
     const date = new Date()
     useEffect(() => {
-      axios.get(`http://localhost:3000/getService/${serviceUid}/2025/09/05`)
+      axios.get(`http://localhost:3000/getService/${serviceUid}/2025/09/05`) // temp hardcoded date
       .then(response => {
         if (response.data.error !== undefined) {
           setError(true)
