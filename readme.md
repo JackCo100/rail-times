@@ -10,5 +10,5 @@ In a second terminal run the same commands in /client/
 
 ##API information
 This is powered by the [RealTimeTrains API](https://api.rtt.io/), this requires a developer account to run the project and auth information to be pasted in a keys.js file in /server/
-'export const username = "YOUR_USERNAME";
-export const password ="YOUR_PASSWORD"'
+`export const username = "YOUR_USERNAME";
+export const password ="YOUR_PASSWORD"`
