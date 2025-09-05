@@ -2,7 +2,7 @@
 
 This application displays live departures from specified UK National Rail stations, as well as specific service information.
 
-##Installation
+## Installation
 - Requires Node.js 22.17.0
 
 cd into /server/ and run `npm install`, then `npm run dev`
