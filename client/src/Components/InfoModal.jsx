@@ -21,6 +21,7 @@ export default function InfoModal( {serviceUid}) {
     }, [serviceUid])
         
   return (
+    results == null ? <p>Getting Data</p> :
   <dialog open className="bg-white border-2 border-black p-4 fixed bottom-4 right-4">
     <h1 className="text-2xl mb-4">Service Details</h1>
     <h2 className="text-xl mb-2">{results.origin[0].publicTime} {results.origin[0].description} to {results.destination[0].description}</h2>
