@@ -5,13 +5,14 @@ export default function InfoModal( {serviceUid}) {
     const [results, setResults] = useState(null);
     const [error, setError] = useState(false);
     const date = new Date()
+    const formattedMonth = date.getMonth() > 10 ? date.getMonth() : '0' + (date.getMonth() + 1) //add leading 0 to month for jan-sep as required by api call
+    const formattedDay = date.getDate() > 9 ? date.getDate() : '0' + date.getDate()  //add leading 0 to day for 0-9 as required by api call
     useEffect(() => {
-      axios.get(`http://localhost:3000/getService/${serviceUid}/2025/09/05`) // temp hardcoded date
+      axios.get(`http://localhost:3000/getService/${serviceUid}/${date.getFullYear()}/${formattedMonth}/${formattedDay}`)
       .then(response => {
         if (response.data.error !== undefined) {
           setError(true)
           setResults(null)
-          alert("Service not found, please try again")
         } else {
           setError(false);
           console.log(response.data)
@@ -22,7 +23,7 @@ export default function InfoModal( {serviceUid}) {
         
   return (
     results == null ? <p>Getting Data</p> :
-  <dialog open className="bg-white border-2 border-black p-4 fixed bottom-4 right-4">
+  <dialog open className="bg-white border-2 border-black p-4 fixed bottom-4 left-0 w-3/4 h-3/4 overflow-auto">
     <h1 className="text-2xl mb-4">Service Details</h1>
     <h2 className="text-xl mb-2">{results.origin[0].publicTime} {results.origin[0].description} to {results.destination[0].description}</h2>
     <table className="table-auto">
