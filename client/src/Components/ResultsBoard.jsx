@@ -1,9 +1,7 @@
 import styles from './ResultsBoard.module.css';
 export default function ResultsBoard({data, setServiceUid,setShowModal}) {
     function handleClick(uid){
-        console.log(uid)
         setServiceUid(uid)
-        setShowModal(true)
     }
     return (
     <div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-export default function InfoModal( {serviceUid}) {
+export default function InfoModal( {serviceUid, setShowModal, setServiceUid} ) {
     const [results, setResults] = useState(null);
     const [error, setError] = useState(false);
     const date = new Date()
@@ -15,20 +15,27 @@ export default function InfoModal( {serviceUid}) {
           setResults(null)
         } else {
           setError(false);
-          console.log(response.data)
           setResults(response.data)
+          setShowModal(true)
         }})
       .catch(error => { console.error('Error fetching data:', error)})
     }, [serviceUid])
+
+    function handleClose(){ //set all states back to null/false to close modal
+        setResults(null)
+        setShowModal(false)
+        setServiceUid(null)
+    }
         
   return (
     results == null ? <p>Getting Data</p> :
   <dialog open className="bg-white border-2 border-black p-4 fixed bottom-4 left-0 w-3/4 h-3/4 overflow-auto">
+    <button className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1" onClick={() => {handleClose()}}>Close</button>
     <h1 className="text-2xl mb-4">Service Details</h1>
     <h2 className="text-xl mb-2">{results.origin[0].publicTime} {results.origin[0].description} to {results.destination[0].description}</h2>
+    <h3 className="text-lg mb-2">Operated by {results.atocName}</h3>
     <table className="table-auto">
       <thead>
-        
         <tr>
             <th className="px-4 py-2">Station</th>
             <th className="px-4 py-2">Scheduled</th>

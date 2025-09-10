@@ -42,11 +42,11 @@ function App() {
         <button type="submit">Get Times</button>
       </form>
       {results != null ? <div className="results">
-          <ResultsBoard data={results} setServiceUid={setServiceUid} setShowModal={setShowModal} />
+          <ResultsBoard data={results} setServiceUid={setServiceUid}/>
         </div>  : "" 
       }
       {
-        showModal ? <InfoModal data={results} serviceUid={serviceUid}/> : ""
+        serviceUid != null ? <InfoModal data={results} serviceUid={serviceUid} setShowModal={setShowModal} setServiceUid={setServiceUid}/> : ""
       }
       
     </>
