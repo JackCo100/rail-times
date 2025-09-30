@@ -33,6 +33,9 @@ function App() {
   function handleChange(event){
     setStationCode(event.target.value);
   }
+  function handleDefaultSelect(code){
+    setStationCode(code);
+  }
   return (
     <>
       <Header />
@@ -43,12 +46,24 @@ function App() {
       </form>
       {results != null ? <div className="results">
           <ResultsBoard data={results} setServiceUid={setServiceUid}/>
-        </div>  : "" 
+        </div>  : 
+        <div className="w-1/3 m-auto text-center">
+          <h2>Example Popular Stations:</h2>
+          <ul>
+            <li><a href="#" onClick={() => handleDefaultSelect("BHM")}>Birmingham New Street</a></li>
+            <li><a href="#" onClick={() => handleDefaultSelect("CDF")}>Cardiff Central</a></li>
+            <li><a href="#" onClick={() => handleDefaultSelect("EDB")}>Edinburgh Waverly</a></li>
+            <li><a href="#" onClick={() => handleDefaultSelect("GLC")}>Glasgow Central</a></li>
+            <li><a href="#" onClick={() => handleDefaultSelect("EUS")}>London Euston</a></li>
+            <li><a href="#" onClick={() => handleDefaultSelect("WAT")}>London Waterloo</a></li>
+            <li><a href="#" onClick={() => handleDefaultSelect("LIV")}>Liverpool Lime Street</a></li>
+            <li><a href="#" onClick={() => handleDefaultSelect("MAN")}>Manchester Piccadilly</a></li>
+          </ul>
+        </div>
       }
       {
         serviceUid != null ? <InfoModal data={results} serviceUid={serviceUid} setShowModal={setShowModal} setServiceUid={setServiceUid}/> : ""
       }
-      
     </>
   )
 }
