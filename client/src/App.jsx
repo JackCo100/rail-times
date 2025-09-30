@@ -37,9 +37,9 @@ function App() {
     <>
       <Header />
       <form action={handleSubmit}>
-        <label htmlFor="stationCode">Station Code:</label>
-        <input type="text" id="stationCode" name="stationCode" onChange={handleChange} value={stationCode}/>
-        <button type="submit">Get Times</button>
+        <label htmlFor="stationCode">Station Code: </label>
+        <input type="text" id="stationCode" name="stationCode" onChange={handleChange} value={stationCode} placeholder="Station code" className='border rounded px-2 m-2'/>
+        <button type="submit" className="bg-blue-300 hover:bg-blue-500 px-1 rounded">Get Times</button>
       </form>
       {results != null ? <div className="results">
           <ResultsBoard data={results} setServiceUid={setServiceUid}/>

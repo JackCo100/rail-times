@@ -19,7 +19,7 @@ export default function ResultsBoard({data, setServiceUid,setShowModal}) {
         </thead>
         <tbody>
             {data.services.map((service) => (
-                <tr onClick={() => handleClick(service.serviceUid)} key={service.serviceUid} className="odd:bg-white even:bg-gray-200">
+                <tr onClick={() => handleClick(service.serviceUid)} key={service.serviceUid} className="odd:bg-white even:bg-gray-200 hover:bg-gray-300 cursor-pointer">
                     <td>{service.locationDetail.gbttBookedDeparture}</td>
                     <td>{service.locationDetail.destination[0]['description']}</td>
                     <td>{service.serviceType === "bus" ? "Bus Replacement" : service.locationDetail.platform}</td>
