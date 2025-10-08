@@ -1,5 +1,5 @@
 import styles from './ResultsBoard.module.css';
-export default function ResultsBoard({data, setServiceUid,setShowModal}) {
+export default function ResultsBoard({data, setServiceUid}) {
     function handleClick(uid){
         setServiceUid(uid)
     }
