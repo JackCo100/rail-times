@@ -28,10 +28,15 @@ export default function InfoModal( {serviceUid, setShowModal, setServiceUid} ) {
     }
         
   return (
-    results == null ? <p>Getting Data</p> :
+    
     <div className="backdrop-blur-sm fixed inset-0 flex-auto items-center justify-center">
       <dialog open className="bg-white border-2 border-black p-4 w-1/2 h-9/10 my-10 overflow-auto inset-0 m-auto relative">
         <button className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1" onClick={() => {handleClose()}}>Close</button>
+        {results == null ? 
+        <><h1>Loading Data</h1> 
+        <p>We're getting there</p>
+        </>:
+        <>
         <h1 className="text-2xl mb-4">Service Details</h1>
         <h2 className="text-xl mb-2">{results.origin[0].publicTime} {results.origin[0].description} to {results.destination[0].description}</h2>
         <h3 className="text-lg mb-2">Operated by {results.atocName}</h3>
@@ -54,7 +59,7 @@ export default function InfoModal( {serviceUid, setShowModal, setServiceUid} ) {
               ))
             }
             </tbody>
-        </table>
+        </table> </>}
       </dialog>
     </div>
     
