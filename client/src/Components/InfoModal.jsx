@@ -48,8 +48,8 @@ export default function InfoModal( {serviceUid, setShowModal, setServiceUid} ) {
               results.locations.map((loc) => (
                 <tr key={loc.crs}>
                     <td className="border px-4 py-2">{loc.description}</td>
-                    <td className="border px-4 py-2">{loc.gbttBookedDeparture}</td>
-                    <td className="border px-4 py-2">{loc.realtimeDeparture}</td>
+                    <td className="border px-4 py-2">{loc.gbttBookedDeparture ? loc.gbttBookedDeparture : loc.gbttBookedArrival}</td>
+                    <td className="border px-4 py-2">{loc.realtimeDeparture ? loc.realtimeDeparture : loc.realtimeArrival}</td>
                 </tr>
               ))
             }
