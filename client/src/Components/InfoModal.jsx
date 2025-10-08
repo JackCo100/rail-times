@@ -5,7 +5,7 @@ export default function InfoModal( {serviceUid, setShowModal, setServiceUid} ) {
     const [results, setResults] = useState(null);
     const [error, setError] = useState(false);
     const date = new Date()
-    const formattedMonth = date.getMonth() > 10 ? date.getMonth() : '0' + (date.getMonth() + 1) //add leading 0 to month for jan-sep as required by api call
+    const formattedMonth = date.getMonth()+1 > 9 ? date.getMonth() + 1 : '0' + (date.getMonth() + 1) //add leading 0 to month for jan-sep as required by api call
     const formattedDay = date.getDate() > 9 ? date.getDate() : '0' + date.getDate()  //add leading 0 to day for 0-9 as required by api call
     useEffect(() => {
       axios.get(`http://localhost:3000/getService/${serviceUid}/${date.getFullYear()}/${formattedMonth}/${formattedDay}`)
