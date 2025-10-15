@@ -17,7 +17,6 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
           setError(false);
           setResults(response.data)
           setShowModal(true)
-          console.log(response.data)
         }})
       .catch(error => { console.error('Error fetching data:', error)})
     }, [serviceUid])
@@ -52,15 +51,19 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
             <tbody>
               {
               results.locations.map((loc) => (
-                <tr key={loc.crs} className={loc.crs === stationCode ? "bg-gray-200" : ""}>
+                <tr key={loc.crs} className={loc.crs === stationCode ? "bg-gray-200 border px-4 py-2" : "border px-4 py-2"}>
                     <td className="border px-4 py-2">{loc.description}</td>
                     <td className="border px-4 py-2">{loc.gbttBookedDeparture ? loc.gbttBookedDeparture : loc.gbttBookedArrival}</td>
-                    <td className="border px-4 py-2">{loc.realtimeDeparture ? loc.realtimeDeparture : loc.realtimeArrival}</td>
+                    {loc.realtimeDeparture ? 
+                    <td className= {loc.realtimeDeparture <= loc.gbttBookedDeparture ? "text-green-700 font-bold " : "text-red-800 font-bold"} >{loc.realtimeDeparture}</td>
+                    :
+                    <td className= {loc.realtimeArrival <= loc.gbttBookedArrival ? "text-green-700 font-bold " : "text-red-800 font-bold"} >{loc.realtimeArrival}</td>}
                 </tr>
               ))
             }
             </tbody>
-        </table> </>}
+        </table>
+        <p>If you arrive at your destination 15 or more minutes late, you may be entitled to compensation. Contact <a className={"underline text-blue-600 hover:text-blue-800"} href='https://www.nationalrail.co.uk/travel-information/find-a-train-company/'>{results.atocName}</a> for more information.</p> </>}
       </dialog>
     </div>
     
