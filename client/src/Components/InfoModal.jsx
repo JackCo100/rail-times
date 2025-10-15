@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-export default function InfoModal( {serviceUid, setShowModal, setServiceUid} ) {
+export default function InfoModal( {serviceUid, stationCode, setShowModal, setServiceUid} ) {
     const [results, setResults] = useState(null);
     const [error, setError] = useState(false);
     const date = new Date()
@@ -17,6 +17,7 @@ export default function InfoModal( {serviceUid, setShowModal, setServiceUid} ) {
           setError(false);
           setResults(response.data)
           setShowModal(true)
+          console.log(response.data)
         }})
       .catch(error => { console.error('Error fetching data:', error)})
     }, [serviceUid])
@@ -51,7 +52,7 @@ export default function InfoModal( {serviceUid, setShowModal, setServiceUid} ) {
             <tbody>
               {
               results.locations.map((loc) => (
-                <tr key={loc.crs}>
+                <tr key={loc.crs} className={loc.crs === stationCode ? "bg-gray-200" : ""}>
                     <td className="border px-4 py-2">{loc.description}</td>
                     <td className="border px-4 py-2">{loc.gbttBookedDeparture ? loc.gbttBookedDeparture : loc.gbttBookedArrival}</td>
                     <td className="border px-4 py-2">{loc.realtimeDeparture ? loc.realtimeDeparture : loc.realtimeArrival}</td>

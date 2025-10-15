@@ -62,7 +62,7 @@ function App() {
         </div>
       }
       {
-        serviceUid != null ? <InfoModal data={results} serviceUid={serviceUid} setShowModal={setShowModal} setServiceUid={setServiceUid}/> : ""
+        serviceUid != null ? <InfoModal data={results} serviceUid={serviceUid} stationCode= {stationCode} setShowModal={setShowModal} setServiceUid={setServiceUid}/> : ""
       }
     </>
   )
