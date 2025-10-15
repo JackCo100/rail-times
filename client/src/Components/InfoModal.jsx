@@ -40,12 +40,13 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
         <h1 className="text-2xl mb-4">Service Details</h1>
         <h2 className="text-xl mb-2">{results.origin[0].publicTime} {results.origin[0].description} to {results.destination[0].description}</h2>
         <h3 className="text-lg mb-2">Operated by {results.atocName}</h3>
+        {results.serviceType == "bus"? <h3 className='bg-red-400 font-bold'>A replacement bus service is operating for this service, please see station signage and staff for information.</h3> : ""}
         <table className="table-auto w-full text-center">
           <thead>
             <tr>
                 <th className="px-4 py-2">Station</th>
                 <th className="px-4 py-2">Scheduled</th>
-                <th className="px-4 py-2">Expected / Actual</th>
+                {results.serviceType == "bus"? "" : <th className="px-4 py-2">Expected / Actual</th>}
             </tr>
             </thead>
             <tbody>
@@ -54,7 +55,7 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
                 <tr key={loc.crs} className={loc.crs === stationCode ? "bg-gray-200 border px-4 py-2" : "border px-4 py-2"}>
                     <td className="border px-4 py-2">{loc.description}</td>
                     <td className="border px-4 py-2">{loc.gbttBookedDeparture ? loc.gbttBookedDeparture : loc.gbttBookedArrival}</td>
-                    {loc.realtimeDeparture ? 
+                    {results.serviceType == "bus"? "" : loc.realtimeDeparture ? 
                     <td className= {loc.realtimeDeparture <= loc.gbttBookedDeparture ? "text-green-700 font-bold " : "text-red-800 font-bold"} >{loc.realtimeDeparture}</td>
                     :
                     <td className= {loc.realtimeArrival <= loc.gbttBookedArrival ? "text-green-700 font-bold " : "text-red-800 font-bold"} >{loc.realtimeArrival}</td>}
