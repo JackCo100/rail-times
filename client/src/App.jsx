@@ -31,7 +31,7 @@ function App() {
       console.log('errored')
   })}
   function handleChange(event){
-    setStationCode(event.target.value);
+    setStationCode(event.target.value.toUpperCase());
   }
   function handleDefaultSelect(code){
     setStationCode(code);
