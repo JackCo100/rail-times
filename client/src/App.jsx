@@ -58,6 +58,7 @@ function App() {
             <li><a href="#" onClick={() => handleDefaultSelect("WAT")}>London Waterloo</a></li>
             <li><a href="#" onClick={() => handleDefaultSelect("LIV")}>Liverpool Lime Street</a></li>
             <li><a href="#" onClick={() => handleDefaultSelect("MAN")}>Manchester Piccadilly</a></li>
+            <li><a href="#" onClick={() => handleDefaultSelect("NCL")}>Newcastle</a></li>
           </ul>
         </div>
       }
