@@ -46,7 +46,7 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
             <tr>
                 <th className="px-4 py-2">Station</th>
                 <th className="px-4 py-2">Scheduled</th>
-                {results.serviceType == "bus"? "" : <th className="px-4 py-2">Expected / Actual</th>}
+                {results.serviceType == "bus"? null : <th className="px-4 py-2">Expected / Actual</th>}
             </tr>
             </thead>
             <tbody>
@@ -54,11 +54,11 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
               results.locations.map((loc) => (
                 <tr key={loc.crs} className={loc.crs === stationCode ? "bg-gray-200 border px-4 py-2" : "border px-4 py-2"}>
                     <td className="border px-4 py-2">{loc.description}</td>
-                    <td className="border px-4 py-2">{loc.gbttBookedDeparture ? loc.gbttBookedDeparture : loc.gbttBookedArrival}</td>
-                    {results.serviceType == "bus"? "" : loc.realtimeDeparture ? 
-                    <td className= {loc.realtimeDeparture <= loc.gbttBookedDeparture ? "text-green-700 font-bold " : "text-red-800 font-bold"} >{loc.realtimeDeparture}</td>
+                    <td className="border px-4 py-2">{loc.gbttBookedDeparture ? (loc.gbttBookedDeparture).slice(0,2) + ":" + (loc.gbttBookedDeparture).slice(2,4) : (loc.gbttBookedArrival).slice(0,2) + ":" + (loc.gbttBookedArrival).slice(2,4) }</td>
+                    {results.serviceType == "bus"? null : loc.realtimeDeparture ? 
+                    <td className= {loc.realtimeDeparture <= loc.gbttBookedDeparture ? "text-green-700 font-bold " : "text-red-800 font-bold"} >{(loc.realtimeDeparture).slice(0,2) + ":" + (loc.realtimeDeparture).slice(2,4)}</td>
                     :
-                    <td className= {loc.realtimeArrival <= loc.gbttBookedArrival ? "text-green-700 font-bold " : "text-red-800 font-bold"} >{loc.realtimeArrival}</td>}
+                    <td className= {loc.realtimeArrival <= loc.gbttBookedArrival ? "text-green-700 font-bold " : "text-red-800 font-bold"} >{(loc.realtimeArrival).slice(0,2) + ":" + (loc.realtimeArrival).slice(2,4)}</td>}
                 </tr>
               ))
             }
