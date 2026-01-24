@@ -20,7 +20,13 @@ function App() {
         setError(true)
         setResults(null)
         alert("Station code not found, please try again")
-      } else {
+      } 
+      if (response.data.services === null){
+        setError(true)
+        setResults(null)
+        alert("No departures scheduled for " + response.data.location.name + " at this time.")
+      }
+      else {
         setError(false);
         setResults(response.data)
         
