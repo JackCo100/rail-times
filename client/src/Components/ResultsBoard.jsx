@@ -22,8 +22,8 @@ export default function ResultsBoard({data, setServiceUid}) {
                 <tr onClick={() => handleClick(service.serviceUid)} key={service.serviceUid} className="odd:bg-white even:bg-gray-200 hover:bg-gray-300 cursor-pointer">
                     <td>{(service.locationDetail.gbttBookedDeparture).slice(0,2) + ":" + (service.locationDetail.gbttBookedDeparture).slice(2,4)}</td>
                     <td>{service.locationDetail.destination[0]['description']}</td>
-                    <td>{service.serviceType === "bus" ? "Bus Replacement" : service.locationDetail.platform}</td>
-                    <td>{service.serviceType === "bus" ? "See Station Staff" : (service.locationDetail.realtimeDeparture).slice(0,2) + ":" + (service.locationDetail.realtimeDeparture).slice(2,4) }</td>
+                    <td>{service.serviceType === "bus"  ? "Bus Replacement" : service.serviceType === "ship" ? "Ferry" : service.locationDetail.platform}</td>
+                    <td>{service.serviceType === "bus" || service.serviceType === "ship" ? "See station signage" : (service.locationDetail.realtimeDeparture).slice(0,2) + ":" + (service.locationDetail.realtimeDeparture).slice(2,4) }</td>
                     <td>{service.atocName}</td>
                 </tr>
             ))}
