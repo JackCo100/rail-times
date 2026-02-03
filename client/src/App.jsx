@@ -17,17 +17,17 @@ function App() {
     axios.get(`http://localhost:3000/getDepartures/${stationCode}`)
     .then(response => {
       if (response.data.error !== undefined) {
-        setError(true)
-        setResults(null)
+        setError(() => setError(true));
+        setResults(() => setResults(null));
         alert("Station code not found, please try again")
       } 
       if (response.data.services === null){
-        setError(true)
-        setResults(null)
+        setError(() => setError(true));
+        setResults(() => setResults(null));
         alert("No departures scheduled for " + response.data.location.name + " at this time.")
       }
       else {
-        setError(false);
+        setError(() => setError(false));
         setResults(response.data)
         
       }
