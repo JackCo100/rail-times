@@ -7,6 +7,7 @@ import axios from 'axios';
 
 function App() {
   const [stationCode, setStationCode] = useState('');
+  const [viaCode, setViaCode] = useState('');
   const [results, setResults] = useState(null);
   const [error, setError] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -14,42 +15,64 @@ function App() {
 
   function handleSubmit(){
     console.log(`localhost:3000/getDepartures/${stationCode}`)
-    axios.get(`http://localhost:3000/getDepartures/${stationCode}`)
-    .then(response => {
-      if (response.data.error !== undefined) {
-        setError(() => setError(true));
-        setResults(() => setResults(null));
-        alert("Station code not found, please try again")
-      } 
-      if (response.data.services === null){
-        setError(() => setError(true));
-        setResults(() => setResults(null));
-        alert("No departures scheduled for " + response.data.location.name + " at this time.")
-      }
-      else {
-        setError(() => setError(false));
-        setResults(response.data)
-        
-      }
-    })
-    .catch(error => {
-      console.error('Error fetching data:', error);
-      console.log('errored')
-  })}
-  function handleChange(event){
+    if (viaCode === ''){
+      axios.get(`http://localhost:3000/getDepartures/${stationCode}`)
+      .then(response => {
+        if (response.data.error !== undefined) {
+          setError(() => setError(true));
+          setResults(() => setResults(null));
+          alert("Station code not found, please try again")
+        } 
+        if (response.data.services === null){
+          setError(() => setError(true));
+          setResults(() => setResults(null));
+          alert("No departures scheduled for " + response.data.location.name + " at this time.")
+        }
+        else {
+          setError(() => setError(false));
+          setResults(response.data)
+          
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+    })} else {
+      axios.get(`http://localhost:3000/getDepartures/${stationCode}/to/${viaCode}`)
+      .then(response => {
+        if (response.data.error !== undefined) {
+          setError(() => setError(true));
+          setResults(() => setResults(null));
+          alert("Station code not found, please try again") // add better error message saying which stn code not found
+        } 
+        if (response.data.services === null){
+          setError(() => setError(true));
+          setResults(() => setResults(null));
+          alert("No departures scheduled for " + response.data.location.name + " calling at " + response.data.filter.destination.name + " at this time.")
+        }
+        else {
+          setError(() => setError(false));
+          setResults(response.data)
+          
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        console.log('errored')
+    })}
+}
+
+  function handleStnCodeChange(event){
     setStationCode(event.target.value.toUpperCase());
+  }
+  function handleViaCodeChange(event){
+    setViaCode(event.target.value.toUpperCase());
   }
   function handleDefaultSelect(code){
     setStationCode(code);
   }
   return (
     <>
-      <Header />
-      <form action={handleSubmit}>
-        <label htmlFor="stationCode">Station Code: </label>
-        <input type="text" id="stationCode" name="stationCode" onChange={handleChange} value={stationCode} placeholder="Station code" className='border rounded px-2 m-2'/>
-        <button type="submit" className="bg-blue-300 hover:bg-blue-500 px-1 rounded">Get Times</button>
-      </form>
+      <Header handleSubmit={handleSubmit} handleStnCodeChange={handleStnCodeChange} handleViaCodeChange={handleViaCodeChange} stationCode={stationCode} viaCode={viaCode}/>
       {results != null ? <div className="results">
           <ResultsBoard data={results} setServiceUid={setServiceUid}/>
         </div>  : 

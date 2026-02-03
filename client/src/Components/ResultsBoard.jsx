@@ -6,7 +6,7 @@ export default function ResultsBoard({data, setServiceUid}) {
     return (
     <div>
       <h1>Results</h1>
-      <p>Live departures from <b>{data.location.name}</b></p>
+      <p>Live departures from <b>{data.location.name}</b> {data.filter ? `calling at ${data.filter.destination.name}` : ""}</p>
       <table className="border border-slate-400 table-fixed w-full text-center">
         <thead className="bg-slate-800 text-white">
             <tr>
