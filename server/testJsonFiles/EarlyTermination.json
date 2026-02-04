@@ -1,0 +1,903 @@
+{
+  "serviceUid": "L66782",
+  "runDate": "2026-02-04",
+  "serviceType": "train",
+  "isPassenger": true,
+  "trainIdentity": "2Y58",
+  "powerType": "DMU",
+  "trainClass": "S",
+  "atocCode": "AW",
+  "atocName": "Transport for Wales",
+  "performanceMonitored": true,
+  "origin": [
+    {
+      "tiploc": "RHYMNEY",
+      "description": "Rhymney",
+      "workingTime": "141000",
+      "publicTime": "1410"
+    }
+  ],
+  "destination": [
+    {
+      "tiploc": "CRDFCEN",
+      "description": "Cardiff Central",
+      "workingTime": "150700",
+      "publicTime": "1508"
+    }
+  ],
+  "locations": [
+    {
+      "realtimeActivated": true,
+      "tiploc": "RHYMNEY",
+      "crs": "RHY",
+      "description": "Rhymney",
+      "gbttBookedDeparture": "1410",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeDeparture": "1420",
+      "realtimeDepartureActual": true,
+      "realtimeGbttDepartureLateness": 10,
+      "platform": "1",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "line": "UDR",
+      "lineConfirmed": true,
+      "displayAs": "ORIGIN",
+      "associations": [
+        {
+          "type": "next",
+          "associatedUid": "L66437",
+          "associatedRunDate": "2026-02-04"
+        }
+      ]
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "PNTLTYN",
+      "crs": "PLT",
+      "description": "Pontlottyn",
+      "gbttBookedArrival": "1413",
+      "gbttBookedDeparture": "1413",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1422",
+      "realtimeArrivalActual": true,
+      "realtimeDeparture": "1423",
+      "realtimeDepartureActual": true,
+      "realtimeGbttArrivalLateness": 10,
+      "realtimeGbttDepartureLateness": 10,
+      "platform": "1",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "TIRPHIL",
+      "crs": "TIR",
+      "description": "Tir-phil",
+      "gbttBookedArrival": "1417",
+      "gbttBookedDeparture": "1418",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1427",
+      "realtimeArrivalActual": true,
+      "realtimeDeparture": "1431",
+      "realtimeDepartureActual": true,
+      "realtimeGbttArrivalLateness": 10,
+      "realtimeGbttDepartureLateness": 13,
+      "platform": "2",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "BRITHDR",
+      "crs": "BHD",
+      "description": "Brithdir",
+      "gbttBookedArrival": "1420",
+      "gbttBookedDeparture": "1420",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1433",
+      "realtimeArrivalActual": true,
+      "realtimeDeparture": "1434",
+      "realtimeDepartureActual": true,
+      "realtimeGbttArrivalLateness": 13,
+      "realtimeGbttDepartureLateness": 14,
+      "platform": "1",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "BARGOED",
+      "crs": "BGD",
+      "description": "Bargoed",
+      "gbttBookedArrival": "1424",
+      "gbttBookedDeparture": "1424",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1438",
+      "realtimeArrivalActual": true,
+      "realtimeDeparture": "1438",
+      "realtimeDepartureActual": true,
+      "realtimeGbttArrivalLateness": 14,
+      "realtimeGbttDepartureLateness": 14,
+      "platform": "1",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "line": "DR",
+      "lineConfirmed": true,
+      "path": "UDR",
+      "pathConfirmed": true,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "PENGAM",
+      "crs": "PGM",
+      "description": "Pengam",
+      "gbttBookedArrival": "1429",
+      "gbttBookedDeparture": "1429",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1440",
+      "realtimeArrivalActual": true,
+      "realtimeDeparture": "1441",
+      "realtimeDepartureActual": true,
+      "realtimeGbttArrivalLateness": 12,
+      "realtimeGbttDepartureLateness": 12,
+      "platform": "2",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "HENGOED",
+      "crs": "HNG",
+      "description": "Hengoed",
+      "gbttBookedArrival": "1432",
+      "gbttBookedDeparture": "1433",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1444",
+      "realtimeArrivalActual": true,
+      "realtimeDeparture": "1443",
+      "realtimeDepartureActual": true,
+      "realtimeGbttArrivalLateness": 12,
+      "realtimeGbttDepartureLateness": 10,
+      "platform": "2",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "YSTRADM",
+      "crs": "YSM",
+      "description": "Ystrad Mynach",
+      "gbttBookedArrival": "1435",
+      "gbttBookedDeparture": "1436",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1444",
+      "realtimeArrivalActual": true,
+      "realtimeDeparture": "1444",
+      "realtimeDepartureActual": true,
+      "realtimeGbttArrivalLateness": 9,
+      "realtimeGbttDepartureLateness": 8,
+      "platform": "1",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "LLBRDCH",
+      "crs": "LNB",
+      "description": "Llanbradach",
+      "gbttBookedArrival": "1440",
+      "gbttBookedDeparture": "1440",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1449",
+      "realtimeArrivalActual": true,
+      "realtimeDeparture": "1448",
+      "realtimeDepartureActual": true,
+      "realtimeGbttArrivalLateness": 9,
+      "realtimeGbttDepartureLateness": 7,
+      "platform": "2",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "ABER",
+      "crs": "ABE",
+      "description": "Aber",
+      "gbttBookedArrival": "1445",
+      "gbttBookedDeparture": "1445",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1452",
+      "realtimeArrivalActual": false,
+      "realtimeArrivalNoReport": true,
+      "realtimeDeparture": "1450",
+      "realtimeDepartureActual": true,
+      "realtimeGbttDepartureLateness": 4,
+      "platform": "1",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "CRPHLY",
+      "crs": "CPH",
+      "description": "Caerphilly",
+      "gbttBookedArrival": "1447",
+      "gbttBookedDeparture": "1448",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1452",
+      "realtimeArrivalActual": true,
+      "realtimeDeparture": "1453",
+      "realtimeDepartureActual": true,
+      "realtimeGbttArrivalLateness": 5,
+      "realtimeGbttDepartureLateness": 5,
+      "platform": "2",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "LTHH",
+      "crs": "LVT",
+      "description": "Lisvane & Thornhill",
+      "gbttBookedArrival": "1452",
+      "gbttBookedDeparture": "1453",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1457",
+      "realtimeArrivalActual": true,
+      "realtimeDeparture": "1456",
+      "realtimeDepartureActual": true,
+      "realtimeGbttArrivalLateness": 5,
+      "realtimeGbttDepartureLateness": 3,
+      "platform": "2",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "LLISHEN",
+      "crs": "LLS",
+      "description": "Llanishen",
+      "gbttBookedArrival": "1455",
+      "gbttBookedDeparture": "1455",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1458",
+      "realtimeArrivalActual": true,
+      "realtimeDeparture": "1459",
+      "realtimeDepartureActual": true,
+      "realtimeGbttArrivalLateness": 4,
+      "realtimeGbttDepartureLateness": 3,
+      "platform": "2",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "HEATHHL",
+      "crs": "HHL",
+      "description": "Heath High Level",
+      "gbttBookedArrival": "1458",
+      "gbttBookedDeparture": "1458",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1501",
+      "realtimeArrivalActual": true,
+      "realtimeDeparture": "1458",
+      "realtimeDepartureActual": true,
+      "realtimeGbttArrivalLateness": 3,
+      "platform": "2",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "CARDFQS",
+      "crs": "CDQ",
+      "description": "Cardiff Queen Street",
+      "gbttBookedArrival": "1504",
+      "gbttBookedDeparture": "1504",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1502",
+      "realtimeArrivalActual": true,
+      "realtimeDeparture": "1503",
+      "realtimeDepartureActual": true,
+      "realtimeGbttArrivalLateness": null,
+      "realtimeGbttDepartureLateness": null,
+      "platform": "3",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "line": "DL",
+      "lineConfirmed": true,
+      "path": "DR",
+      "pathConfirmed": true,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "CRDFCEN",
+      "crs": "CDF",
+      "description": "Cardiff Central",
+      "gbttBookedArrival": "1508",
+      "gbttBookedDeparture": "1509",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1506",
+      "realtimeArrivalActual": true,
+      "realtimeDeparture": "1509",
+      "realtimeDepartureActual": false,
+      "realtimeGbttArrivalLateness": null,
+      "platform": "8",
+      "platformConfirmed": true,
+      "platformChanged": false,
+      "path": "DL",
+      "pathConfirmed": true,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "TERMINATES"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "GNTN",
+      "crs": "GTN",
+      "description": "Grangetown",
+      "gbttBookedArrival": "1513",
+      "gbttBookedDeparture": "1513",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1512",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1513",
+      "realtimeDepartureActual": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "COGAN",
+      "crs": "CGN",
+      "description": "Cogan",
+      "gbttBookedArrival": "1516",
+      "gbttBookedDeparture": "1517",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1516",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1517",
+      "realtimeDepartureActual": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "EASTBRK",
+      "crs": "EBK",
+      "description": "Eastbrook",
+      "gbttBookedArrival": "1519",
+      "gbttBookedDeparture": "1520",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1519",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1520",
+      "realtimeDepartureActual": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "DINASP",
+      "crs": "DNS",
+      "description": "Dinas Powys",
+      "gbttBookedArrival": "1522",
+      "gbttBookedDeparture": "1522",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1521",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1522",
+      "realtimeDepartureActual": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "CADOXTN",
+      "crs": "CAD",
+      "description": "Cadoxton",
+      "gbttBookedArrival": "1526",
+      "gbttBookedDeparture": "1527",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1526",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1527",
+      "realtimeDepartureActual": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "BARRYDK",
+      "crs": "BYD",
+      "description": "Barry Docks",
+      "gbttBookedArrival": "1529",
+      "gbttBookedDeparture": "1530",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1529",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1530",
+      "realtimeDepartureActual": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "BARRY",
+      "crs": "BRY",
+      "description": "Barry",
+      "gbttBookedArrival": "1535",
+      "gbttBookedDeparture": "1539",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1534",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1539",
+      "realtimeDepartureActual": false,
+      "platform": "3",
+      "platformConfirmed": false,
+      "platformChanged": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "BARRYIS",
+      "crs": "BYI",
+      "description": "Barry Island",
+      "gbttBookedArrival": "1546",
+      "origin": [
+        {
+          "tiploc": "RHYMNEY",
+          "description": "Rhymney",
+          "workingTime": "141000",
+          "publicTime": "1410"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "150700",
+          "publicTime": "1508"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1542",
+      "realtimeArrivalActual": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL",
+      "associations": [
+        {
+          "type": "next",
+          "associatedUid": "L65274",
+          "associatedRunDate": "2026-02-04"
+        }
+      ]
+    }
+  ],
+  "realtimeActivated": true,
+  "runningIdentity": "2Y58"
+}

@@ -32,6 +32,13 @@ app.get('/getService/:Uid/:year/:month/:day', async (req, res) => {
 }).then((result) => result.json().then((resJson) => {return resJson}).catch(() => {return 'error getting service'})))
 })
 
+//Test endpoints
+
+//Early Terminating Service endpoint
+/* app.get('/getTestEarly', async (req, res) => {
+  res.sendFile('\\testJsonFiles\\EarlyTermination.json', {root: __dirname})
+}) */ 
+
 //TODO: better error handling
 
 app.listen(port, () => {

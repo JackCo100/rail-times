@@ -1,0 +1,729 @@
+{
+  "serviceUid": "L65274",
+  "runDate": "2026-02-04",
+  "serviceType": "train",
+  "isPassenger": true,
+  "trainIdentity": "2D42",
+  "powerType": "DMU",
+  "trainClass": "S",
+  "atocCode": "AW",
+  "atocName": "Transport for Wales",
+  "performanceMonitored": true,
+  "origin": [
+    {
+      "tiploc": "CRDFCEN",
+      "description": "Cardiff Central",
+      "workingTime": "162200",
+      "publicTime": "1622"
+    }
+  ],
+  "destination": [
+    {
+      "tiploc": "BARGOED",
+      "description": "Bargoed",
+      "workingTime": "170600",
+      "publicTime": "1708"
+    }
+  ],
+  "locations": [
+    {
+      "realtimeActivated": true,
+      "tiploc": "BARRYIS",
+      "crs": "BYI",
+      "description": "Barry Island",
+      "gbttBookedDeparture": "1549",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeDeparture": "1549",
+      "realtimeDepartureActual": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL",
+      "associations": [
+        {
+          "type": "next",
+          "associatedUid": "L66782",
+          "associatedRunDate": "2026-02-04"
+        }
+      ]
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "BARRY",
+      "crs": "BRY",
+      "description": "Barry",
+      "gbttBookedArrival": "1553",
+      "gbttBookedDeparture": "1554",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1552",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1554",
+      "realtimeDepartureActual": false,
+      "platform": "1",
+      "platformConfirmed": false,
+      "platformChanged": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "BARRYDK",
+      "crs": "BYD",
+      "description": "Barry Docks",
+      "gbttBookedArrival": "1557",
+      "gbttBookedDeparture": "1557",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1556",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1557",
+      "realtimeDepartureActual": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "CADOXTN",
+      "crs": "CAD",
+      "description": "Cadoxton",
+      "gbttBookedArrival": "1600",
+      "gbttBookedDeparture": "1600",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1559",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1600",
+      "realtimeDepartureActual": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "DINASP",
+      "crs": "DNS",
+      "description": "Dinas Powys",
+      "gbttBookedArrival": "1604",
+      "gbttBookedDeparture": "1605",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1604",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1605",
+      "realtimeDepartureActual": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "EASTBRK",
+      "crs": "EBK",
+      "description": "Eastbrook",
+      "gbttBookedArrival": "1607",
+      "gbttBookedDeparture": "1607",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1606",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1607",
+      "realtimeDepartureActual": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "COGAN",
+      "crs": "CGN",
+      "description": "Cogan",
+      "gbttBookedArrival": "1610",
+      "gbttBookedDeparture": "1611",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1609",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1611",
+      "realtimeDepartureActual": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "GNTN",
+      "crs": "GTN",
+      "description": "Grangetown",
+      "gbttBookedArrival": "1615",
+      "gbttBookedDeparture": "1615",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1614",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1615",
+      "realtimeDepartureActual": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "CANCELLED_CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "CRDFCEN",
+      "crs": "CDF",
+      "description": "Cardiff Central",
+      "gbttBookedArrival": "1621",
+      "gbttBookedDeparture": "1622",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1619",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1622",
+      "realtimeDepartureActual": false,
+      "platform": "6",
+      "platformConfirmed": false,
+      "platformChanged": false,
+      "cancelReasonCode": "YI",
+      "cancelReasonShortText": "inbound service late",
+      "cancelReasonLongText": "late arrival of an inbound service",
+      "displayAs": "STARTS"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "CARDFQS",
+      "crs": "CDQ",
+      "description": "Cardiff Queen Street",
+      "gbttBookedArrival": "1626",
+      "gbttBookedDeparture": "1626",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1624",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1626",
+      "realtimeDepartureActual": false,
+      "platform": "5",
+      "platformConfirmed": false,
+      "platformChanged": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "HEATHHL",
+      "crs": "HHL",
+      "description": "Heath High Level",
+      "gbttBookedArrival": "1630",
+      "gbttBookedDeparture": "1630",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1630",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1630",
+      "realtimeDepartureActual": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "LLISHEN",
+      "crs": "LLS",
+      "description": "Llanishen",
+      "gbttBookedArrival": "1633",
+      "gbttBookedDeparture": "1634",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1633",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1634",
+      "realtimeDepartureActual": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "LTHH",
+      "crs": "LVT",
+      "description": "Lisvane & Thornhill",
+      "gbttBookedArrival": "1636",
+      "gbttBookedDeparture": "1636",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1636",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1636",
+      "realtimeDepartureActual": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "CRPHLY",
+      "crs": "CPH",
+      "description": "Caerphilly",
+      "gbttBookedArrival": "1642",
+      "gbttBookedDeparture": "1642",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1641",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1642",
+      "realtimeDepartureActual": false,
+      "platform": "3",
+      "platformConfirmed": false,
+      "platformChanged": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "ABER",
+      "crs": "ABE",
+      "description": "Aber",
+      "gbttBookedArrival": "1644",
+      "gbttBookedDeparture": "1644",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1643",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1644",
+      "realtimeDepartureActual": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "ERGNCHP",
+      "crs": "ECP",
+      "description": "Energlyn & Churchill Park",
+      "gbttBookedArrival": "1646",
+      "gbttBookedDeparture": "1646",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1646",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1646",
+      "realtimeDepartureActual": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "LLBRDCH",
+      "crs": "LNB",
+      "description": "Llanbradach",
+      "gbttBookedArrival": "1649",
+      "gbttBookedDeparture": "1649",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1649",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1649",
+      "realtimeDepartureActual": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "YSTRADM",
+      "crs": "YSM",
+      "description": "Ystrad Mynach",
+      "gbttBookedArrival": "1655",
+      "gbttBookedDeparture": "1655",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1654",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1655",
+      "realtimeDepartureActual": false,
+      "platform": "2",
+      "platformConfirmed": false,
+      "platformChanged": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "HENGOED",
+      "crs": "HNG",
+      "description": "Hengoed",
+      "gbttBookedArrival": "1657",
+      "gbttBookedDeparture": "1657",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1657",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1657",
+      "realtimeDepartureActual": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "PENGAM",
+      "crs": "PGM",
+      "description": "Pengam",
+      "gbttBookedArrival": "1701",
+      "gbttBookedDeparture": "1701",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1700",
+      "realtimeArrivalActual": false,
+      "realtimeDeparture": "1701",
+      "realtimeDepartureActual": false,
+      "displayAs": "CALL"
+    },
+    {
+      "realtimeActivated": true,
+      "tiploc": "BARGOED",
+      "crs": "BGD",
+      "description": "Bargoed",
+      "gbttBookedArrival": "1708",
+      "origin": [
+        {
+          "tiploc": "CRDFCEN",
+          "description": "Cardiff Central",
+          "workingTime": "162200",
+          "publicTime": "1622"
+        }
+      ],
+      "destination": [
+        {
+          "tiploc": "BARGOED",
+          "description": "Bargoed",
+          "workingTime": "170600",
+          "publicTime": "1708"
+        }
+      ],
+      "isCall": true,
+      "isPublicCall": true,
+      "realtimeArrival": "1705",
+      "realtimeArrivalActual": false,
+      "platform": "1",
+      "platformConfirmed": false,
+      "platformChanged": false,
+      "displayAs": "DESTINATION"
+    }
+  ],
+  "realtimeActivated": true,
+  "runningIdentity": "2D42"
+}
