@@ -23,7 +23,7 @@ export default function ResultsBoard({data, setServiceUid}) {
                     <td>{(service.locationDetail.gbttBookedDeparture).slice(0,2) + ":" + (service.locationDetail.gbttBookedDeparture).slice(2,4)}</td>
                     <td>{service.locationDetail.destination[0]['description']}</td>
                     <td>{service.serviceType === "bus"  ? "Bus Replacement" : service.serviceType === "ship" ? "Ferry" : service.locationDetail.platform}</td>
-                    <td>{service.serviceType === "bus" || service.serviceType === "ship" || service.locationDetail.realtimeDeparture == null ? "See station signage" : service.locationDetail.displayAs === "CANCELLED_CALL" ? "Cancelled" : (service.locationDetail.realtimeDeparture).slice(0,2) + ":" + (service.locationDetail.realtimeDeparture).slice(2,4)}</td>
+                    <td className={service.locationDetail.displayAs === "CANCELLED_CALL" ? " text-red-800 font-bold" : ""}>{service.serviceType === "bus" || service.serviceType === "ship" || service.locationDetail.realtimeDeparture == null ? "See station signage" : service.locationDetail.displayAs === "CANCELLED_CALL" ? "Cancelled" : (service.locationDetail.realtimeDeparture).slice(0,2) + ":" + (service.locationDetail.realtimeDeparture).slice(2,4)}</td>
                     <td>{service.atocName}</td>
                 </tr>
             ))}
