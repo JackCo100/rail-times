@@ -49,6 +49,7 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
         <h3 className="text-lg mb-2">Operated by {results.atocName}</h3>
         {results.serviceType == "bus" ? <h3 className='bg-red-400 font-bold'>A replacement bus service is operating for this service, please see station signage and staff for information.</h3> : ""}
         {results.serviceType == "ship" ? <h3 className='bg-red-400 font-bold'>This is a ferry service, please see station signage and staff for information.</h3> : ""}
+        {results.locations[0].displayAs ==="CANCELLED_CALL" ? <h3 className='bg-red-400 font-bold'>This service has been cancelled due to {results.locations[0].cancelReasonLongText}</h3> : ""}
         <table className="table-auto w-full text-center">
           <thead>
             <tr>
@@ -65,7 +66,9 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
                 <tr key={loc.crs} className={loc.crs === stationCode ? "bg-gray-200 border px-4 py-2" : "border px-4 py-2"}>
                     <td className="border px-4 py-2">{loc.description}</td>
                     <td className="border px-4 py-2">{loc.gbttBookedDeparture ? (loc.gbttBookedDeparture).slice(0,2) + ":" + (loc.gbttBookedDeparture).slice(2,4) : (loc.gbttBookedArrival).slice(0,2) + ":" + (loc.gbttBookedArrival).slice(2,4) }</td>
-                    {results.serviceType == "bus" || results.serviceType == "ship" ? <td className="border px-4 py-2">{"See station signage"}</td> : loc.realtimeDeparture ? 
+                    {loc.displayAs ==="CANCELLED_CALL" ? 
+                    <td className=" text-red-800 font-bold">Cancelled</td> :
+                    results.serviceType == "bus" || results.serviceType == "ship" ? <td className="border px-4 py-2">{"See station signage"}</td> : loc.realtimeDeparture ? 
                     <td className= {loc.realtimeDeparture <= loc.gbttBookedDeparture ? "text-green-700 font-bold " : "text-red-800 font-bold"} >{(loc.realtimeDeparture).slice(0,2) + ":" + (loc.realtimeDeparture).slice(2,4)}</td>
                     :
                     <td className= {loc.realtimeArrival <= loc.gbttBookedArrival ? "text-green-700 font-bold " : "text-red-800 font-bold"} >{(loc.realtimeArrival).slice(0,2) + ":" + (loc.realtimeArrival).slice(2,4)}</td>}
