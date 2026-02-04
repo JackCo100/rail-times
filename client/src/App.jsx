@@ -71,7 +71,7 @@ function App() {
     setStationCode(code);
   }
   return (
-    <>
+    <body className= { serviceUid != null ? "overflow-hidden" : ""}>
       <Header handleSubmit={handleSubmit} handleStnCodeChange={handleStnCodeChange} handleViaCodeChange={handleViaCodeChange} stationCode={stationCode} viaCode={viaCode}/>
       {results != null ? <div className="results">
           <ResultsBoard data={results} setServiceUid={setServiceUid}/>
@@ -94,7 +94,7 @@ function App() {
       {
         serviceUid != null ? <InfoModal data={results} serviceUid={serviceUid} stationCode= {stationCode} setShowModal={setShowModal} setServiceUid={setServiceUid}/> : ""
       }
-    </>
+    </body>
   )
 }
 
