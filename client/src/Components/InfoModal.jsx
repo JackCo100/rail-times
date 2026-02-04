@@ -33,7 +33,6 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
     function handleClickPrevious(){
       setStationIndex(0)
     }
-        
   return (
     
     <div className="backdrop-blur-sm fixed inset-0 flex-auto items-center justify-center">
@@ -49,7 +48,7 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
         <h3 className="text-lg mb-2">Operated by {results.atocName}</h3>
         {results.serviceType == "bus" ? <h3 className='bg-red-400 font-bold'>A replacement bus service is operating for this service, please see station signage and staff for information.</h3> : ""}
         {results.serviceType == "ship" ? <h3 className='bg-red-400 font-bold'>This is a ferry service, please see station signage and staff for information.</h3> : ""}
-        {results.locations[0].displayAs ==="CANCELLED_CALL" ? <h3 className='bg-red-400 font-bold'>This service has been cancelled due to {results.locations[0].cancelReasonLongText}</h3> : ""}
+        {results.locations[0].displayAs ==="CANCELLED_CALL" && results.locations[results.locations.length - 1].displayAs === "CANCELLED_CALL" ? <h3 className='bg-red-400 font-bold'>This service has been cancelled due to {results.locations[0].cancelReasonLongText}</h3> : ""}
         <table className="table-auto w-full text-center">
           <thead>
             <tr>
