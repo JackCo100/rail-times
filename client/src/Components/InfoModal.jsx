@@ -5,6 +5,8 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
     const [results, setResults] = useState(null);
     const [error, setError] = useState(false);
     const [stationIndex, setStationIndex] = useState(null);
+    const [DisruptionInfo, setDisruptionInfo] = useState([]);
+
     const date = new Date()
     const formattedMonth = date.getMonth()+1 > 9 ? date.getMonth() + 1 : '0' + (date.getMonth() + 1) //add leading 0 to month for jan-sep as required by api call
     const formattedDay = date.getDate() > 9 ? date.getDate() : '0' + date.getDate()  //add leading 0 to day for 0-9 as required by api call
@@ -18,8 +20,18 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
           setError(false);
           setResults(response.data)
           setStationIndex(response.data.locations.findIndex(loc => loc.crs === stationCode))
+          //console.log(response.data.locations.find(loc => loc.displayAs === "STARTS") != undefined || response.data.locations.find(loc => loc.displayAs === "TERMINATES") != undefined)
+          if (response.data.locations.find(loc => loc.displayAs === "STARTS") != undefined ){
+            if (response.data.locations.find(loc => loc.displayAs === "TERMINATES") != undefined){
+              setDisruptionInfo([response.data.locations.find(loc => loc.displayAs === "STARTS"), response.data.locations.find(loc => loc.displayAs === "TERMINATES")])
+            }
+            else{
+              setDisruptionInfo([response.data.locations.find(loc => loc.displayAs === "STARTS"), null])
+            }
+          } else if (response.data.locations.find(loc => loc.displayAs === "TERMINATES") != undefined){ 
+            setDisruptionInfo([null,response.data.locations.find(loc => loc.displayAs === "TERMINATES")])
+          } else {setDisruptionInfo([])}
           setShowModal(true)
-          
         }})
       .catch(error => { console.error('Error fetching data:', error)})
     }, [serviceUid])
@@ -49,6 +61,13 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
         {results.serviceType == "bus" ? <h3 className='bg-red-400 font-bold'>A replacement bus service is operating for this service, please see station signage and staff for information.</h3> : ""}
         {results.serviceType == "ship" ? <h3 className='bg-red-400 font-bold'>This is a ferry service, please see station signage and staff for information.</h3> : ""}
         {results.locations[0].displayAs ==="CANCELLED_CALL" && results.locations[results.locations.length - 1].displayAs === "CANCELLED_CALL" ? <h3 className='bg-red-400 font-bold'>This service has been cancelled due to {results.locations[0].cancelReasonLongText}</h3> : ""}
+        {DisruptionInfo.length > 0 ? 
+        <h3 className='bg-red-400 font-bold'>
+          This service 
+          {DisruptionInfo[0] != null ? " is partially cancelled between " + results.locations[0].description + " and " + DisruptionInfo[0].description + ", due to " + DisruptionInfo[0].cancelReasonLongText : ""}
+          {DisruptionInfo[1] != null ? "is partially cancelled between " + DisruptionInfo[1].description + " and " + results.locations[results.locations.length -1].description + ", due to " + DisruptionInfo[1].cancelReasonLongText : ""}.
+          </h3> : ""}
+          
         <table className="table-auto w-full text-center">
           <thead>
             <tr>
