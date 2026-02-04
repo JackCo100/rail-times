@@ -10,8 +10,9 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
     const date = new Date()
     const formattedMonth = date.getMonth()+1 > 9 ? date.getMonth() + 1 : '0' + (date.getMonth() + 1) //add leading 0 to month for jan-sep as required by api call
     const formattedDay = date.getDate() > 9 ? date.getDate() : '0' + date.getDate()  //add leading 0 to day for 0-9 as required by api call
+    const year = date.getFullYear() //needed to maintain correct year for favourites
     useEffect(() => {
-      axios.get(`http://localhost:3000/getService/${serviceUid}/${date.getFullYear()}/${formattedMonth}/${formattedDay}`)
+      axios.get(`${import.meta.env.VITE_SERVER_URL}/getService/${serviceUid}/${date.getFullYear()}/${formattedMonth}/${formattedDay}`)
       .then(response => {
         if (response.data.error !== undefined) {
           setError(true)

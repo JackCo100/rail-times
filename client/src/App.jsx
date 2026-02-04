@@ -14,9 +14,8 @@ function App() {
   const [serviceUid, setServiceUid] = useState(null);
 
   function handleSubmit(){
-    console.log(`localhost:3000/getDepartures/${stationCode}`)
     if (viaCode === ''){
-      axios.get(`http://localhost:3000/getDepartures/${stationCode}`)
+      axios.get(`${import.meta.env.VITE_SERVER_URL}/getDepartures/${stationCode}`)
       .then(response => {
         if (response.data.error !== undefined) {
           setError(() => setError(true));
@@ -37,7 +36,7 @@ function App() {
       .catch(error => {
         console.error('Error fetching data:', error);
     })} else {
-      axios.get(`http://localhost:3000/getDepartures/${stationCode}/to/${viaCode}`)
+      axios.get(`${import.meta.env.VITE_SERVER_URL}/getDepartures/${stationCode}/to/${viaCode}`)
       .then(response => {
         if (response.data.error !== undefined) {
           setError(() => setError(true));
