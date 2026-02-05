@@ -1,12 +1,25 @@
 import styles from './ResultsBoard.module.css';
+import { useState } from 'react';
+
 export default function ResultsBoard({data, setServiceUid}) {
+    const [favourite, setFavourite] = useState(localStorage.getItem(data.location.crs) != null ? true : false);
     function handleClick(uid){
         setServiceUid(uid)
     }
+    function addFavourite(){
+        localStorage.setItem(data.location.crs, data.location.name);
+        setFavourite(true);
+    }
+    function removeFavourite(){
+        localStorage.removeItem(data.location.crs);
+        setFavourite(false);
+    }
+    console.log(favourite)
     return (
     <div>
       <h1>Results</h1>
       <p>Live departures from <b>{data.location.name}</b> {data.filter ? " calling at" : ""} {data.filter ? <b>{data.filter.destination.name}</b> : ""}</p>
+      <button className="absolute top-20 right-2 bg-orange-500 text-white px-2 py-1 cursor-pointer hover:bg-orange-600" onClick={favourite ? () => removeFavourite() : () => addFavourite()}>{favourite ? "Remove Favourite" : "Favourite"}</button>
       <table className="border border-slate-400 table-fixed w-full text-center">
         <thead className="bg-slate-800 text-white">
             <tr>

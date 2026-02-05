@@ -13,7 +13,7 @@ function App() {
   const [error, setError] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [serviceUid, setServiceUid] = useState(null);
-  const [favourites, setFavourites] = useState([]);
+  const [favourites, setFavourites] = useState(localStorage);
 
   function handleSubmit(){
     if (viaCode === ''){
@@ -71,26 +71,32 @@ function App() {
   function handleDefaultSelect(code){
     setStationCode(code);
   }
+
   return (
     <>
       <Header handleSubmit={handleSubmit} handleStnCodeChange={handleStnCodeChange} handleViaCodeChange={handleViaCodeChange} stationCode={stationCode} viaCode={viaCode}/>
       {results != null ? <div className="results">
-          <ResultsBoard data={results} setServiceUid={setServiceUid} setFavourites={setFavourites} />
+          <ResultsBoard data={results} setServiceUid={setServiceUid} setFavourites={setFavourites}  favourites={favourites}/>
         </div>  : 
+       
         <div className="w-1/3 m-auto text-center">
-          <Favourites/>
-          <h2>Example Popular Stations:</h2>
-          <ul>
-            <li><a href="#" onClick={() => handleDefaultSelect("BHM")}>Birmingham New Street</a></li>
-            <li><a href="#" onClick={() => handleDefaultSelect("CDF")}>Cardiff Central</a></li>
-            <li><a href="#" onClick={() => handleDefaultSelect("EDB")}>Edinburgh Waverly</a></li>
-            <li><a href="#" onClick={() => handleDefaultSelect("GLC")}>Glasgow Central</a></li>
-            <li><a href="#" onClick={() => handleDefaultSelect("EUS")}>London Euston</a></li>
-            <li><a href="#" onClick={() => handleDefaultSelect("WAT")}>London Waterloo</a></li>
-            <li><a href="#" onClick={() => handleDefaultSelect("LIV")}>Liverpool Lime Street</a></li>
-            <li><a href="#" onClick={() => handleDefaultSelect("MAN")}>Manchester Piccadilly</a></li>
-            <li><a href="#" onClick={() => handleDefaultSelect("NCL")}>Newcastle</a></li>
-          </ul>
+          {favourites.length > 0 ? 
+          <Favourites favourites={favourites} handleDefaultSelect={handleDefaultSelect}/> : 
+          <div>
+            <h2>Example Popular Stations:</h2>
+            <ul>
+              <li><a href="#" onClick={() => handleDefaultSelect("BHM")}>Birmingham New Street</a></li>
+              <li><a href="#" onClick={() => handleDefaultSelect("CDF")}>Cardiff Central</a></li>
+              <li><a href="#" onClick={() => handleDefaultSelect("EDB")}>Edinburgh Waverly</a></li>
+              <li><a href="#" onClick={() => handleDefaultSelect("GLC")}>Glasgow Central</a></li>
+              <li><a href="#" onClick={() => handleDefaultSelect("EUS")}>London Euston</a></li>
+              <li><a href="#" onClick={() => handleDefaultSelect("WAT")}>London Waterloo</a></li>
+              <li><a href="#" onClick={() => handleDefaultSelect("LIV")}>Liverpool Lime Street</a></li>
+              <li><a href="#" onClick={() => handleDefaultSelect("MAN")}>Manchester Piccadilly</a></li>
+              <li><a href="#" onClick={() => handleDefaultSelect("NCL")}>Newcastle</a></li>
+            </ul>
+          </div>
+          }
         </div>
       }
       {

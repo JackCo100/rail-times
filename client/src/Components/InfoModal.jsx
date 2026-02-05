@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-export default function InfoModal( {serviceUid, stationCode, setShowModal, setServiceUid} ) {
+export default function InfoModal( {serviceUid, stationCode, setShowModal, setServiceUid,setFavourites} ) {
     const [results, setResults] = useState(null);
     const [error, setError] = useState(false);
     const [stationIndex, setStationIndex] = useState(null);
@@ -21,7 +21,6 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
           setError(false);
           setResults(response.data)
           setStationIndex(response.data.locations.findIndex(loc => loc.crs === stationCode))
-          //console.log(response.data.locations.find(loc => loc.displayAs === "STARTS") != undefined || response.data.locations.find(loc => loc.displayAs === "TERMINATES") != undefined)
           if (response.data.locations.find(loc => loc.displayAs === "STARTS") != undefined ){
             if (response.data.locations.find(loc => loc.displayAs === "TERMINATES") != undefined){
               setDisruptionInfo([response.data.locations.find(loc => loc.displayAs === "STARTS"), response.data.locations.find(loc => loc.displayAs === "TERMINATES")])
@@ -50,10 +49,11 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
     
     <div className="backdrop-blur-sm fixed inset-0 flex-auto items-center justify-center">
       <dialog open className="bg-white border-2 border-black p-4 w-1/2 h-9/10 my-10 overflow-auto inset-0 m-auto relative">
-        <button className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1" onClick={() => {handleClose()}}>Close</button>
+        <button className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 cursor-pointer hover:bg-red-600" onClick={() => {handleClose()}}>Close</button>
         {results == null ? 
-        <><h1>Loading Data</h1> 
-        <p>We're getting there</p>
+        <>
+          <h1>Loading Data</h1> 
+          <p>We're getting there</p>
         </>:
         <>
         <h1 className="text-2xl mb-4">Service Details</h1>
