@@ -4,6 +4,7 @@ import ResultsBoard from './Components/ResultsBoard.jsx';
 import InfoModal from './Components/InfoModal.jsx';
 import { useState } from 'react';
 import axios from 'axios';
+import Favourites from './Components/Favourites.jsx';
 
 function App() {
   const [stationCode, setStationCode] = useState('');
@@ -12,6 +13,7 @@ function App() {
   const [error, setError] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [serviceUid, setServiceUid] = useState(null);
+  const [favourites, setFavourites] = useState([]);
 
   function handleSubmit(){
     if (viaCode === ''){
@@ -73,9 +75,10 @@ function App() {
     <>
       <Header handleSubmit={handleSubmit} handleStnCodeChange={handleStnCodeChange} handleViaCodeChange={handleViaCodeChange} stationCode={stationCode} viaCode={viaCode}/>
       {results != null ? <div className="results">
-          <ResultsBoard data={results} setServiceUid={setServiceUid}/>
+          <ResultsBoard data={results} setServiceUid={setServiceUid} setFavourites={setFavourites} />
         </div>  : 
         <div className="w-1/3 m-auto text-center">
+          <Favourites/>
           <h2>Example Popular Stations:</h2>
           <ul>
             <li><a href="#" onClick={() => handleDefaultSelect("BHM")}>Birmingham New Street</a></li>
