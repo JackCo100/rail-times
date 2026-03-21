@@ -57,7 +57,7 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
         </>:
         <>
         <h1 className="text-2xl mb-4">Service Details</h1>
-        <h2 className="text-xl mb-2">{results.origin[0].publicTime} {results.origin[0].description} to {results.destination[0].description}</h2>
+        <h2 className="text-xl mb-2">{results.origin[0].publicTime.slice(0,2) + ":" + results.origin[0].publicTime.slice(2,4)} {results.origin[0].description} to {results.destination[0].description}</h2>
         <h3 className="text-lg mb-2">Operated by {results.atocName}</h3>
         {results.serviceType == "bus" ? <h3 className='bg-red-400 font-bold'>A replacement bus service is operating for this service, please see station signage and staff for information.</h3> : ""}
         {results.serviceType == "ship" ? <h3 className='bg-red-400 font-bold'>This is a ferry service, please see station signage and staff for information.</h3> : ""}
