@@ -9,7 +9,7 @@ app.get('/getDepartures/:stnCode', async (req, res) => {
     headers: {
         'Authorization': `Basic ${btoa(process.env.AUTH_ID + ":" + process.env.AUTH_PASSWORD)}`,
     },
-}).then((result) => result.json().then((resJson) => {return resJson}).catch(() => {return 'error getting station'})))
+}).then((result) => result.json().then((resJson) => {return resJson}).catch(() => {res.status(400).send('Station code not found') })))
 })
 
 //departures via a specific station endpoint

@@ -74,6 +74,7 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
             <tr>
                 <th className="px-4 py-2">Station</th>
                 <th className="px-4 py-2">Scheduled</th>
+                <th className="px-1 py-2">Platform</th>
                 {results.serviceType == "bus"? null : <th className="px-4 py-2">Expected / Actual</th>}
             </tr>
             </thead>
@@ -85,6 +86,8 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
                 <tr key={loc.crs} className={loc.crs === stationCode ? "bg-gray-200 border px-4 py-2" : "border px-4 py-2"}>
                     <td className="border px-4 py-2">{loc.description}</td>
                     <td className="border px-4 py-2">{loc.gbttBookedDeparture ? (loc.gbttBookedDeparture).slice(0,2) + ":" + (loc.gbttBookedDeparture).slice(2,4) : (loc.gbttBookedArrival).slice(0,2) + ":" + (loc.gbttBookedArrival).slice(2,4) }</td>
+                    {loc.platform == null ? <td className="border px-1 py-2">{"Check signage"}</td> :
+                    <td className="border px-1 py-2">{loc.platform}</td> }
                     {loc.displayAs ==="CANCELLED_CALL" ? 
                     <td className=" text-red-800 font-bold">Cancelled</td> :
                     results.serviceType == "bus" || results.serviceType == "ship" ? <td className="border px-4 py-2">{"See station signage"}</td> : loc.realtimeDeparture ? 

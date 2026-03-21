@@ -16,10 +16,14 @@ export default function ResultsBoard({data, setServiceUid}) {
     }
     console.log(favourite)
     return (
-    <div>
+        <>
+    
       <h1>Results</h1>
+      <div className='flex justify-center p-2'>
       <p>Live departures from <b>{data.location.name}</b> {data.filter ? " calling at" : ""} {data.filter ? <b>{data.filter.destination.name}</b> : ""}</p>
-      <button className="absolute top-20 right-2 bg-orange-500 text-white px-2 py-1 cursor-pointer hover:bg-orange-600" onClick={favourite ? () => removeFavourite() : () => addFavourite()}>{favourite ? "Remove Favourite" : "Favourite"}</button>
+      <button className="ml-2 bg-orange-500 text-white hover:bg-orange-600 cursor-pointer px-1 rounded" onClick={favourite ? () => removeFavourite() : () => addFavourite()}>{favourite ? "Remove Favourite" : "Favourite"}</button>
+    </div>
+    <div>
       <table className="border border-slate-400 table-fixed w-full text-center">
         <thead className="bg-slate-800 text-white">
             <tr>
@@ -43,5 +47,6 @@ export default function ResultsBoard({data, setServiceUid}) {
         </tbody>
       </table>
     </div>
+    </>
   );
 }
