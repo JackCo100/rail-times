@@ -80,7 +80,7 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
             </thead>
             <tbody>
               {stationIndex === 0 ? null : 
-              <tr className='border' onClick={handleClickPrevious}><td colSpan={4}>Show earlier stations</td></tr>}
+              <tr className='border cursor-pointer hover:bg-gray-100' onClick={handleClickPrevious}><td colSpan={4}>Show earlier stations</td></tr>}
               {
               results.locations.slice(stationIndex).map((loc) => (
                 <tr key={loc.crs} className={loc.crs === stationCode ? "bg-gray-200 border px-4 py-2" : "border px-4 py-2"}>
