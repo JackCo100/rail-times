@@ -1,5 +1,5 @@
 import './App.css'
-import Header from './Components/Header.jsx'
+import NavBar from './Components/NavBar.jsx'
 import ResultsBoard from './Components/ResultsBoard.jsx';
 import InfoModal from './Components/InfoModal.jsx';
 import { useState } from 'react';
@@ -74,7 +74,8 @@ function App() {
 
   return (
     <>
-      <Header handleSubmit={handleSubmit} handleStnCodeChange={handleStnCodeChange} handleViaCodeChange={handleViaCodeChange} stationCode={stationCode} viaCode={viaCode}/>
+      <NavBar handleSubmit={handleSubmit} handleStnCodeChange={handleStnCodeChange} handleViaCodeChange={handleViaCodeChange} stationCode={stationCode} viaCode={viaCode}/>
+      <div className='md:w-3/4 lg:w-3/4 m-auto p-2"'>
       {results != null ? <div className="results">
           <ResultsBoard data={results} setServiceUid={setServiceUid} setFavourites={setFavourites}  favourites={favourites}/>
         </div>  : 
@@ -102,6 +103,7 @@ function App() {
       {
         serviceUid != null ? <InfoModal data={results} serviceUid={serviceUid} stationCode= {stationCode} setShowModal={setShowModal} setServiceUid={setServiceUid}/> : ""
       }
+      </div>
     </>
   )
 }
