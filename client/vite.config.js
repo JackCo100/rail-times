@@ -7,4 +7,14 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
+  test: {
+    environment: 'happy-dom',
+    setupFiles: './src/tests/setup.js',
+    include: ['src/tests/**/*.test.jsx',
+              'src/components/**/*.test.jsx'
+    ],
+    coverage: {
+      enabled: true
+    },
+  }
 })

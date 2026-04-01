@@ -1,10 +1,10 @@
 import './App.css'
-import NavBar from './Components/NavBar.jsx'
-import ResultsBoard from './Components/ResultsBoard.jsx';
-import InfoModal from './Components/InfoModal.jsx';
+import NavBar from './Components/navbar/NavBar.jsx';
+import ResultsBoard from './Components/resultsBoard/ResultsBoard.jsx';
+import InfoModal from './Components/infoModal/InfoModal.jsx';
 import { useState } from 'react';
 import axios from 'axios';
-import Favourites from './Components/Favourites.jsx';
+import Favourites from './Components/Favourites/Favourites.jsx';
 
 function App() {
   const [stationCode, setStationCode] = useState('');
