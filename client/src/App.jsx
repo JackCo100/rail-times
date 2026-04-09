@@ -70,7 +70,8 @@ function App() {
     setViaCode(event.target.value.toUpperCase());
   }
   function handleDefaultSelect(code){
-    setStationCode(code);
+    setStationCode(code.substr(0,3));
+    setViaCode(code.substr(4,5) )
   }
 
   return (

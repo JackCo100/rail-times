@@ -2,16 +2,17 @@ import styles from './ResultsBoard.module.css';
 import { useState } from 'react';
 
 export default function ResultsBoard({data, setServiceUid}) {
-    const [favourite, setFavourite] = useState(localStorage.getItem(data.location.crs) != null ? true : false);
+    const [favourite, setFavourite] = useState(localStorage.getItem( data.destination ? [data.location.crs, data.filter.destination.crs] : data.location.crs) != null ? true : false);
     function handleClick(uid){
         setServiceUid(uid)
     }
     function addFavourite(){
+        data.destination ? localStorage.setItem([data.location.crs, data.filter.destination.crs], [data.location.name, data.filter.destination.name]) :
         localStorage.setItem(data.location.crs, data.location.name);
         setFavourite(true);
     }
     function removeFavourite(){
-        localStorage.removeItem(data.location.crs);
+        localStorage.removeItem([data.location.crs, data.filter.destination.crs]);
         setFavourite(false);
     }
     console.log(favourite)

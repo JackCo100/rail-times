@@ -6,7 +6,7 @@ export default function Favourites({favourites, handleDefaultSelect}) {
             <ul>
                 {Object.entries(favourites).map(([code, name]) => (
                     <li key={code}>
-                        <a href="#" onClick={() => handleDefaultSelect(code)}>{name}</a>
+                        <a href="#" onClick={() => handleDefaultSelect(code)}>{name.split(",")[1] ? name.split(",")[0] + " via " + name.split(",")[1] : name.split(",")[0]}</a>
                     </li>
                 ))}
             </ul>
