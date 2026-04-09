@@ -59,11 +59,11 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
         <h1 className="text-2xl mb-4">Service Details</h1>
         <h2 className="text-xl mb-2">{results.origin[0].publicTime.slice(0,2) + ":" + results.origin[0].publicTime.slice(2,4)} {results.origin[0].description} to {results.destination[0].description}</h2>
         <h3 className="text-lg mb-2">Operated by {results.atocName}</h3>
-        {results.serviceType == "bus" ? <h3 className='bg-red-400 font-bold'>A replacement bus service is operating for this service, please see station signage and staff for information.</h3> : ""}
-        {results.serviceType == "ship" ? <h3 className='bg-red-400 font-bold'>This is a ferry service, please see station signage and staff for information.</h3> : ""}
-        {results.locations[0].displayAs ==="CANCELLED_CALL" && results.locations[results.locations.length - 1].displayAs === "CANCELLED_CALL" ? <h3 className='bg-red-400 font-bold'>This service has been cancelled due to {results.locations[0].cancelReasonLongText}</h3> : ""}
+        {results.serviceType == "bus" ? <h3 className="bg-red-400 font-bold">A replacement bus service is operating for this service, please see station signage and staff for information.</h3> : ""}
+        {results.serviceType == "ship" ? <h3 className="bg-red-400 font-bold">This is a ferry service, please see station signage and staff for information.</h3> : ""}
+        {results.locations[0].displayAs ==="CANCELLED_CALL" && results.locations[results.locations.length - 1].displayAs === "CANCELLED_CALL" ? <h3 className="bg-red-400 font-bold">This service has been cancelled due to {results.locations[0].cancelReasonLongText}</h3> : ""}
         {DisruptionInfo.length > 0 ? 
-        <h3 className='bg-red-400 font-bold'>
+        <h3 className="bg-red-400 font-bold">
           This service 
           {DisruptionInfo[0] != null ? " is partially cancelled between " + results.locations[0].description + " and " + DisruptionInfo[0].description + ", due to " + DisruptionInfo[0].cancelReasonLongText : ""}
           {DisruptionInfo[1] != null ? "is partially cancelled between " + DisruptionInfo[1].description + " and " + results.locations[results.locations.length -1].description + ", due to " + DisruptionInfo[1].cancelReasonLongText : ""}.
@@ -80,7 +80,7 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
             </thead>
             <tbody>
               {stationIndex === 0 ? null : 
-              <tr className='border cursor-pointer hover:bg-gray-100' onClick={handleClickPrevious}><td colSpan={4}>Show earlier stations</td></tr>}
+              <tr className="border cursor-pointer hover:bg-gray-100" onClick={handleClickPrevious}><td colSpan={4}>Show earlier stations</td></tr>}
               {
               results.locations.slice(stationIndex).map((loc) => (
                 <tr key={loc.crs} className={loc.crs === stationCode ? "bg-gray-200 border px-4 py-2" : "border px-4 py-2"}>
