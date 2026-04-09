@@ -48,7 +48,7 @@ export default function InfoModal( {serviceUid, stationCode, setShowModal, setSe
   return (
     
     <div className="backdrop-blur-sm fixed inset-0 flex-auto items-center justify-center">
-      <dialog open className="bg-white border-2 border-black p-4 w-1/2 h-9/10 my-10 overflow-auto inset-0 m-auto relative">
+      <dialog open className="bg-white border-2 border-black p-4 w-1/2 h-9/10 my-10 overflow-auto inset-0 m-auto relative sm:w-full md:w-3/4 lg:w-1/2">
         <button className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 cursor-pointer hover:bg-red-600" onClick={() => {handleClose()}}>Close</button>
         {results == null ? 
         <>
