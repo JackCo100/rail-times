@@ -75,8 +75,9 @@ function App() {
 
   return (
     <>
+    <div className="h-screen flex flex-col">
       <NavBar handleSubmit={handleSubmit} handleStnCodeChange={handleStnCodeChange} handleViaCodeChange={handleViaCodeChange} stationCode={stationCode} viaCode={viaCode}/>
-      <div className="md:w-3/4 lg:w-3/4 m-auto p-2">
+      <div className="sm:w-full md:w-full lg:w-3/4 m-auto p-2 flex-1">
       {results != null ? <div className="results">
           <ResultsBoard data={results} setServiceUid={setServiceUid} setFavourites={setFavourites}  favourites={favourites}/>
         </div>  : 
@@ -106,6 +107,7 @@ function App() {
       }
       </div>
       <Footer />
+      </div>
     </>
   )
 }
