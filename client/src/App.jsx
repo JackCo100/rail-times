@@ -71,7 +71,7 @@ function App() {
   }
   function handleDefaultSelect(code){
     setStationCode(code.substr(0,3));
-    setViaCode(code.substr(4,5) )
+    setViaCode(code.substr(4,5));
   }
 
   return (
@@ -83,7 +83,7 @@ function App() {
           <ResultsBoard data={results} setServiceUid={setServiceUid} setFavourites={setFavourites}  favourites={favourites}/>
         </div>  : 
        
-        <div className="w-1/3 m-auto text-center">
+        <div className="sm:w-full md:w-full lg:w-3/4 m-auto text-center">
           {favourites.length > 0 ? 
           <Favourites favourites={favourites} handleDefaultSelect={handleDefaultSelect}/> : 
           <div>
